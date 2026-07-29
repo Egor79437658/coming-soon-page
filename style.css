@@ -46,6 +46,23 @@ body {
     margin: 0 auto;
 }
 
+.shimmer {
+  background: linear-gradient(135deg, #ffffff, #5E5E5E, #ffffff);
+  background-clip: text;
+  color: transparent;
+  background-size: 200% 100%;
+  animation: shimmer 5s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
 @keyframes spin {
     to {
         transform: rotate(360deg);
