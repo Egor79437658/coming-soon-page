@@ -8,14 +8,9 @@ body {
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
     sans-serif;
-  background: 
-    url("/public/images/background.png");
-  background-size: 
-    cover,
-    cover;
-  background-position: 
-    center,
-    center;
+  background: url("/public/images/background.png");
+  background-size: cover, cover;
+  background-position: center, center;
   background-blend-mode: normal;
   color: #f8fafc;
   display: flex;
@@ -24,11 +19,16 @@ body {
   height: 100vh;
   overflow: hidden;
   padding: 0;
+  /* padding-top: 30vh; */
 }
 
 .container {
   text-align: center;
   padding: 2rem;
+}
+
+.content {
+  padding-top: 21vh;
 }
 
 .content h1 {
@@ -58,21 +58,20 @@ body {
 }
 
 .videoDiv {
-    background: radial-gradient(#181a28 25%, transparent 50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 200px;
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translateX(-50%);
-
+  margin: 0 auto;
+  margin-top: 30px;
+  border-radius: 100%;
+  overflow: hidden;
+  width: 39rem;
 }
 
 .videoDiv .videoIcon {
-    position: static;
-    width: 150px;
+  position: static;
+  width: 40rem;
+  border-radius: 100%;
+  display: block;
+  padding: 0;
+  margin: 0;
 }
 
 /* .videoIcon {
@@ -102,5 +101,20 @@ body {
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    padding-top: 0;
+  }
+  .spinner {
+    display: none;
+  }
+  .videoDiv {
+    width: 79vw;
+  }
+  .videoDiv .videoIcon {
+    width: 80vw;
   }
 }
